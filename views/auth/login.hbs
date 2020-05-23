@@ -19,11 +19,16 @@
     <div class="error-message">{{ errorMessage }}</div>
   {{/if}}
   <button type="submit" class="btn btn-primary">Sign in</button>
-  <div>
-  <p class="btn btn-primary">
-    Don't have an account? <a href="/sign-up">Sign up</a>
-  </p></div>
+
 </form>
+
+ 
+
+<div>
+  <form method="get" action="/sign-up">
+    <button class="btn btn-primary" type="submit"> Don't have an account? Sign up</button>
+</form>
+</div>
 
 
 </div>

@@ -3,12 +3,12 @@
 <script src="http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.min.js"></script>
 
  <div class="container">
-  <form id="form"action="/sign-up" method="POST" enctype="multipart/form-data" class="px-4 py-3">
+  <form id="form"action="/profile" method="POST" enctype="multipart/form-data" class="px-4 py-3">
 
 
-{{#if currentUser}}
-  <h3>Welcome, {{currentUser.username}}</h3>
-{{/if}}
+{{#if user}}
+  <h3>Welcome, {{user.username}}</h3>
+
 
  <div class="form-group">
   <label for ="email">Email</label>
@@ -16,13 +16,13 @@
   </div>
 
   <div class="form-group">
-  <label for ="adress">Address</label>
-  <input id="adress" class="form-control" type="text" name="adress" value="{{user.adress}}" placeholder="Your Address" style="text-align: center;">
+  <label for ="address">Address</label>
+  <input id="address" class="form-control" type="text" name="address" value="{{user.address}}" placeholder="Your Address" style="text-align: center;">
   </div>
 
 <div class="form-group">
   <label for="dateOfBirth">Date of Birth</label>
-  <input id="dateOfBirth" class="form-control" type="text" name="adress" value="{{user.dateOfBirth}}" placeholder="1990-01-01" style="text-align: center;">
+  <input id="dateOfBirth" class="form-control" type="Date" name="dateOfBirth" value="{{user.dateOfBirth}}" placeholder="1990-01-01" style="text-align: center;">
 </div>
 
 <div class="form-group">
@@ -44,7 +44,7 @@
 </div>
 
 <div class="form-group">
-    <button type="submit" class="btn btn-primary">Update Account</button>
+    <button type="submit" class="btn btn-primary" >Update Account</button>
 </div>
 </form>
 
@@ -53,5 +53,5 @@
     <button class="btn btn-primary" type="submit">GET SOME NUTS AND GO TO PLAY</button>
 </form>
 </div>
-
+{{/if}}
 </div>
